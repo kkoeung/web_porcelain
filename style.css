@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cinzel:wght@600&family=Lobster&family=Merienda&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header .header-content .header-text{
+    font-family: 'Lobster', cursive;
+}
+.head2 .head2-1 .header2-text{
+    font-family: 'Lobster', cursive;
+}
+.header .login-log{
+    display: none;
+}
+.header .menu-hide{
+    display: none;
+}
+@media (min-width: 320px) and (max-width: 480px){
+    /* header */
+    .header .head .header-content{
+        margin: 0;
+    }
+    .header .head .header-content .header-text{
+        font-size: 20px;
+    }
+    .header .head .header2-content .header2-text{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    /* login-log */
+    .header .login-log{
+        display: block;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .login-log .signin{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 5px 15px;
+    }
+    /* header menu-hide */
+    .header .menu-hide{
+        display: block;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .header-menu{
+        display: none;
+    }
+    /* cover */
+    .cover .cover-items{
+        display: flex;
+        flex-direction:column-reverse;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .cover .cover-items .cover-item{
+        width: 100%;
+        padding: 0;
+    }
+    .cover .cover-items .cover-item .cover-text2{
+        font-size: 30px;
+    }
+    .cover .cover-items .cover-item .cover-shop .cover-text4{
+        padding: 15px 20px;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    /* porcelain1-2 */
+    .porcelain .porcelain1{
+        display: flex;
+        flex-direction: column;
+    }
+    .porcelain .porcelain1 .porcelain1_1-2 {
+        font-size: 30px;
+    }
+    .porcelain .porcelain1 .porcelain2_2 .porcelain2_2-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* porcelain 3- */
+    .porcelain .porcelain3{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .porcelain .porcelain3 .porcelain3_1{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .porcelain .porcelain3 .porcelain3_1 .porcelain3_1-1{
+        font-size: 25px;
+    }
+    .porcelain .porcelain3 .porcelain4_1{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .porcelain .porcelain3 .porcelain4_1 .porcelain4_1-1{
+        font-size: 25px;
+    }
+
+    /* gold */
+    .gold .gold1{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .gold .gold1_1 .gold1_2{
+        width: 150%;
+        
+    }
+    .gold .gold2{
+        width: 100%;
+    }
+    /* gold orange */
+    .gold .orange{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .orange .orange2_1{
+        width: 120%;
+    }
+    .orange .orange1 {
+        width: 100%;
+    }
+
+    /* pottery */
+    .pottery .pottery1_3{
+        font-size: 30px;
+    }
+    .pottery .pottery2_1 .pottery2_2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* cover2 */
+    .cover2 .cover2-item{
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* latest new */
+    .latest-content .latest-items2-1{
+        font-size: 30px;
+        padding: 20px;
+    }
+    .latest-content .latest-items3{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .latest-content .latest-items3 .latest-items3-2{
+        width: 50%;
+        padding: 4.3% 0;
+    }
+
+    /* head2 */
+    .head2 .head2-2{
+        width: 50%;
+    }
+    .head2 .header2-text{
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .head2 .head2-3{
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    .head2 .head2-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .footer-content{
+        font-size: 10px;
+        padding: 0 10px;
+    }
+}
+
+
+    @media (min-width: 481px) and (max-width: 767px) {
+    /* header */
+    .header .head .header-content{
+        margin: 0;
+    }
+    .header .head .header-content .header-item{
+        width: 100px;
+    }
+    .header .head .header-content .header-text{
+        font-size: 25px;
+        margin-top: 5px;
+    }
+    .header .head .header2-content .header2-text{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    /* login-log */
+    .header .login-log{
+        display: block;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .login-log .signin{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 10px 25px;
+    }
+    /* header menu-hide */
+    .header .menu-hide{
+        display: block;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .menu-hide .menu-item{
+        padding: 5px 8px;
+    }
+    .header .header-menu{
+        display: none;
+    }
+    /* cover */
+    .cover .cover-items{
+        display: flex;
+        flex-direction:column-reverse;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .cover .cover-items .cover-item{
+        width: 100%;
+        padding: 0;
+    }
+    .cover .cover-items .cover-item .cover-text2{
+        font-size: 35px;
+    }
+    .cover .cover-items .cover-item .cover-shop .cover-text4{
+        padding: 18px 25px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+    /* porcelain1-2 */
+    .porcelain .porcelain1{
+        display: flex;
+        flex-direction: column;
+    }
+    .porcelain .porcelain1 .porcelain1_1-2 {
+        font-size: 35px;
+    }
+    .porcelain .porcelain1 .porcelain2_2 .porcelain2_2-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* porcelain 3-4 */
+    .porcelain .porcelain3{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .porcelain .porcelain3 .porcelain3_1{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .porcelain .porcelain3 .porcelain3_1 .porcelain3_1-1{
+        font-size: 30px;
+    }
+    .porcelain .porcelain3 .porcelain4_1{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .porcelain .porcelain3 .porcelain4_1 .porcelain4_1-1{
+        font-size: 30px;
+    }
+
+    /* gold */
+    .gold .gold1{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .gold .gold1_1 .gold1_2{
+        width: 150%;
+        
+    }
+    .gold .gold2{
+        width: 100%;
+    }
+    /* gold orange */
+    .gold .orange{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .orange .orange2_1{
+        width: 120%;
+    }
+    .orange .orange1 {
+        width: 100%;
+    }
+
+    /* pottery */
+    .pottery .pottery1_3{
+        font-size: 35px;
+    }
+    .pottery .pottery2_1 .pottery2_2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* cover2 */
+    .cover2 .cover2-item{
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* latest new */
+    .latest-content .latest-items2-1{
+        font-size: 35px;
+        padding: 20px;
+    }
+    .latest-content .latest-items3{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .latest-content .latest-items3 .latest-items3-2{
+        width: 50%;
+        padding: 3% 0;
+    }
+
+    /* head2 */
+    .head2 .head2-2{
+        width: 30%;
+    }
+    .head2 .header2-text{
+        margin-top: 15px;
+    }
+    .head2 .head2-3{
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    .head2 .head2-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .footer-content{
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .header .head .header-menu{
+        width: 100%;
+    }
+    .header .head .header-content .header-text{
+        font-size: 25px;
+    }
+        /* cover */
+    .cover .cover-items{
+        display: flex;
+        flex-direction:column-reverse;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .cover .cover-items .cover-item{
+        width: 100%;
+        padding: 0;
+    }
+    /* porcelain1-2 */
+    .porcelain .porcelain1{
+        display: flex;
+        flex-direction: column;
+    }
+    .porcelain .porcelain1 .porcelain1_1-2 {
+        font-size: 40px;
+    }
+    .porcelain .porcelain1 .porcelain2_2 .porcelain2_2-1{
+        width: 100%;
+    }
+    /* pottery */
+    .pottery .pottery1_3{
+        font-size: 40px;
+    }
+    /* latest new */
+    .latest-content .latest-items2-1{
+        font-size: 35px;
+        padding: 20px;
+    }
+    .latest-content .latest-items3{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .latest-content .latest-items3 .latest-items3-2{
+        width: 50%;
+        padding: 2.8% 0;
+    }
+}

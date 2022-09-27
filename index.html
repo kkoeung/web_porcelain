@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcelian</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind link -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- flowbite link -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.
+    js"></script>
+    <!-- Data Aos link & script-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <section class="container overflow-hidden">
+        <!-- header -->
+        <div class="header">
+            <div class="head w-full py-2 flex flex-row justify-between border">
+                <!-- Head logo -->
+                <div class="header-content flex flex-col justify-center items-center mx-8 ">
+                    <span class="header-text text-3xl text-purple-800 font-bold mx-4">
+                        Porcelain
+                    </span>
+                </div>
+               
+                <!-- Login/signup -->
+                <div class="login-log">
+                    <button class="signin block text-white bg-purple-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"
+                        data-modal-toggle="authentication-modal">
+                        Signin
+                    </button>
+
+                    <!-- Main modal -->
+                    <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+                        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <div class="py-6 px-6 lg:px-8">
+                                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+                                    <form class="space-y-6" action="#">
+                                        <div>
+                                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                placeholder="name@company.com" required="">
+                                        </div>
+                                        <div>
+                                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
+                                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                required="">
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div class="flex items-start">
+                                                <div class="flex items-center h-5">
+                                                    <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                </div>
+                                                <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                                            </div>
+                                            <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                                        </div>
+                                        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+                                        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                            Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="header-menu flex items-center w-6/12">
+                    <ul class="flex flex-row justify-evenly items-center w-full">
+                        <a href="index.html" class="p-2">
+                            <li class="text-sm font-bold text-purple-800 hover:text-orange-600 px-5 py-3">HOME</li>
+                        </a>
+                        <a href="index.html" class="p-2">
+                            <li class="text-sm font-bold text-purple-800 hover:text-orange-600 px-5 py-3">ABOUT</li>
+                        </a>
+                        <a href="index.html" class="p-2">
+                            <li class="text-sm font-bold text-purple-800 hover:text-orange-600 px-5 py-3">SHOP</li>
+                        </a>
+                        <a href="index.html" class="p-2">
+                            <li class="text-sm font-bold text-purple-800 hover:text-orange-600 px-5 py-3">CONTACT</li>
+                        </a>
+                        <!-- Login/signup -->
+                        <div class="Login">
+                            <button class="block text-white bg-purple-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"
+                                data-modal-toggle="authentication-modal">
+                                Signin
+                            </button>
+
+                            <!-- Main modal -->
+                            <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+                                <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                                    <!-- Modal content -->
+                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                        <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="authentication-modal">
+                                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                        <div class="py-6 px-6 lg:px-8">
+                                            <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
+                                            <form class="space-y-6" action="#">
+                                                <div>
+                                                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                                                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                        placeholder="name@company.com" required="">
+                                                </div>
+                                                <div>
+                                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
+                                                    <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                                        required="">
+                                                </div>
+                                                <div class="flex justify-between">
+                                                    <div class="flex items-start">
+                                                        <div class="flex items-center h-5">
+                                                            <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
+                                                        </div>
+                                                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                                                    </div>
+                                                    <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                                                </div>
+                                                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+                                                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                                    Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                
+                <!-- Close Button -->
+                <div class="menu-hide flex justify-center items-center mt-2">
+                    <!-- drawer init and show -->
+                    <div class="text-center">
+                        <button class="menu-item text-white bg-purple-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-1 mr-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+                            <div class="text-3xl flex items-center">
+                                <ion-icon name="menu"></ion-icon>
+                            </div>
+                            
+                        </button>
+                    </div>
+                    
+                    <!-- drawer component -->
+                    <div id="drawer-navigation" class="fixed z-40 h-screen p-4 overflow-y-auto bg-white w-80 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+                    <!-- Head logo -->
+                    <div class="header2-content flex flex-col items-center mx-8">
+                        <a herf class="header2-item flex justify-center items-center w-24 h-12">
+                            <img src="./images/logo.png" class="header-image rounded-full">
+                        </a>
+                        <span class="header2-text text-lg text-gray-700 font-bold mx-4">
+                            Porcelain
+                        </span>
+                    </div>
+                    <button type="button" data-drawer-dismiss="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm px-2 py-1 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                        <div class="text-3xl hover:text-red-600">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+                    </button>
+                    <br>
+                    <hr>
+                    <div class="py-8 overflow-y-auto">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="index.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 hover:text-purple-600 dark:hover:bg-gray-700">
+                                    <div class="text-xl">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </div>
+                                    <span class="w-full ml-3 font-bold text-gray-700 hover:text-purple-600">Home</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="index.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 hover:text-purple-600 dark:hover:bg-gray-700">
+                                    <div class="text-xl">
+                                        <ion-icon name="alert-circle-outline"></ion-icon>
+                                    </div>
+                                    <span class="w-full ml-3 font-bold text-gray-700 hover:text-purple-600">About</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="index.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 hover:text-purple-600 dark:hover:bg-gray-700">
+                                    <div class="text-xl">
+                                        <ion-icon name="pricetags-outline"></ion-icon>
+                                    </div>
+                                    <span class="w-full ml-3 font-bold text-gray-700 hover:text-purple-600">Shop</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="index.html" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 hover:text-purple-600 dark:hover:bg-gray-700">
+                                    <div class="text-xl">
+                                        <ion-icon name="cube-outline"></ion-icon>
+                                    </div>
+                                    <span class="w-full ml-3 font-bold text-gray-700 hover:text-purple-600">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- background cover -->
+        <div class="cover">
+            <div class="cover-image flex bg-center bg-cover" style="background-image: url(./images/11.jpg)">
+                <div class="cover-items flex flex-row">
+                    <div class="cover-item flex flex-col justify-center mt-12 p-8 w-3/6" data-aos="fade-right">
+                        <span class="cover-text1 my-4 text-gray-500">PORCELAIN POTTERY</span>
+                        <div class="">
+                            <h2 class="cover-text2 text-4xl text-blue-800 font-bold">Unique Porcelain & Stone Collection</h2>
+                        </div>
+                        <div class="mt-8">
+                            <span class="cover-text3 text-md text-blue-800">
+                                Unique & modern pottery made by our master in porcelain & stones
+                            </span>
+                        </div>
+                        <div class="cover-shop mt-8">
+                            <span class="cover-text4 text-sm text-white font-bold border px-8 py-6 rounded bg-red-600">
+                                SHOP COLLECTION
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cover-images" data-aos="fade-left">
+                        <div class="cover-img">
+                            <img src="./images/10.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Porcelain -->
+        <div class="porcelain">
+            <div class="porcelain-content flex justify-center items-center">
+                <div class="porcelain-items w-11/12">
+                    <!-- pocelain #1# -> class 1-2 -->
+                    <div class="porcelain1 flex flex-col justify-center items-center">
+                        <!-- # 1 # -->
+                        <div class="porcelain1_1 flex flex-col  items-center my-8">
+                            <span class="porcelain1_1-1 my-4">
+                                PRODUCT CATEGORIES
+                            </span>
+                            <span class="porcelain1_1-2 text-5xl font-bold">
+                                Porcelain & Pottery
+                            </span>
+                        </div>
+
+                        <!-- # 2 # -->
+                        <div class="porcelain2_2 w-full flex justify-center items-center">
+                            <div class="porcelain2_2-1 flex flex-row justify-between items-center w-5/6 my-4">
+                                <!-- 1 -->
+                                <div class="porcelain2_2-2 flex justify-center items-center mx-2 rounded-full w-56 h-56 my-2 bg-red-700"  data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+                                    <a href="" class="porcelain2_2-3 rounded-full flex flex-col justify-center items-center w-40 h-40 bg-red-600">
+                                        <img src="./images/14.png" class="porcelain2_2-image w-20">
+                                        <span class="text-white text-sm py-2" >PLATES</span>
+                                    </a>
+                                </div>
+                                <!-- 2 -->
+                                <div class="porcelain2_2-2 flex justify-center items-center mx-2 rounded-full w-56 h-56 my-2 bg-blue-700" data-aos="fade-down"
+                                data-aos-duration="3000">
+                                    <a href="" class="porcelain2_2-3 rounded-full flex flex-col justify-center items-center w-40 h-40 bg-blue-600">
+                                        <img src="./images/15.png" class="porcelain2_2-image w-20">
+                                        <span class="text-white text-sm" >MUGS</span>
+                                    </a>
+                                </div>
+                                <!-- 3 -->
+                                <div class="porcelain2_2-2 flex justify-center items-center mx-2 rounded-full w-56 h-56 my-2 bg-green-700"  data-aos="fade-left"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+                                    <a href="" class="porcelain2_2-3 rounded-full flex flex-col justify-center items-center w-40 h-40 bg-green-600">
+                                        <img src="./images/13.png" class="porcelain2_2-image w-20">
+                                        <span class="text-white text-sm py-2" >VASES</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pocelain #2# -> class 3- -->
+                    <div class="porcelain3 flex flex-row flex-nowrap my-8">
+                        <div class="porcelain3_1 flex flex-col mx-4 w-3/6" data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
+                            <div class="flex flex-col">
+                                <span class="porcelain3_1-1 text-3xl my-4">
+                                    Hand Grafted Pottery since 1990
+                                </span>
+                                <span class="porcelain3_1-2 text-gray-500 text-justify">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta et voluptates, voluptatem quasi quis hic cupiditate itaque optio nisi dolorum accusamus tempora sapiente alias fugiat! Placeat modi officia enim architecto!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="porcelain4_1 flex flex-col mx-4 w-3/6" data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom">
+                            <div class="flex flex-col">
+                                <span class="porcelain4_1-1 text-3xl my-4">
+                                    We Provide Premium Pottery Produts
+                                </span>
+                                <span class="porcelain4_1-2 text-gray-500 text-justify">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta et voluptates, voluptatem quasi quis hic cupiditate itaque optio nisi dolorum accusamus tempora sapiente alias fugiat! Placeat modi officia enim architecto!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Gold -->
+        <div class="gold mt-20">
+            <div class="gold-content flex justify-center items-center">
+                <div class="gold-items w-11/12">
+                    <!-- Gold #1# -> class 1-2- -->
+                    <div class="gold1 flex flex-row justify-center items-center my-8">
+                        <!-- 1 -->
+                        <div class="gold1_1 flex flex-col items-center mx-4 w-3/6" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                            <div class="gold1_2 flex flex-col w-72">
+                                <img src="./images/3.png">
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="gold2 flex flex-col items-center mx-4 w-3/6">
+                            <div class="gold2_1 flex flex-col" data-aos="fade-left"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                                <span class="gold2_2 font-bold text-2xl my-4">
+                                    Gold & Black Pottery
+                                </span>
+                                <span class="gold2_3 text-gray-500 text-justify">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore dolore aua. Ut enim ad minim veniam, quis nostrud exercitationulco laboris nisi ut aliquip ex ea commodo consequatuisaute.
+                                </span>
+                                <span class="gold2_4 my-8">
+                                    View Details
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orange #2# -> class 1-2- -->
+                    <div class="orange flex flex-row justify-center items-center my-8">
+                        <!-- 1 -->
+                        <div class="orange1 flex flex-col items-center mx-4 w-3/6">
+                            <div class="orange1_1 flex flex-col" data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                                <span class="orange1_2 font-bold text-2xl my-4">
+                                    Orange Ceramic
+                                </span>
+                                <span class="orange1_3 text-gray-500 text-justify">
+                                    Pri cu dico labores officiis, odio principes complectitur ad sea. Sea id doctus forensibus, nec lorem vocent aliquam eu. Aliquid definitiones id cum, ad meliore perpetua referrentur sed. Quas suscipit ad mea verear vivendo tincidunt.
+                                </span>
+                                <span class="orange1_4 my-8">
+                                    View Details
+                                </span>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="orange2_1 flex flex-col items-center mx-4 w-3/6" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                            <div class="orange2_2flex flex-col">
+                                <img src="./images/1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Pottery -->
+        <div class="pottery">
+            <div class="pottery-content flex justify-center items-center">
+                <div class="pottery-items w-11/12">
+                    <!-- pocelain #1# -> class 1-2 -->
+                    <div class="pottery1 flex flex-col justify-center items-center">
+                        <!-- # 1 # -->
+                        <div class="pottery1_1 flex flex-col  items-center my-8">
+                            <span class="pottery1_2 my-4">
+                                OUR ONLINE STORE
+                            </span>
+                            <span class="pottery1_3 text-5xl font-bold">
+                                Pottery Collection
+                            </span>
+                        </div>
+
+                        <!-- # 2 # -->
+                        <div class="pottery2_1 w-full flex items-center">
+                            <div class="pottery2_2 flex flex-row items-center my-4">
+                                <!-- 1 -->
+                                <div class="pottery2_3 flex flex-col items-center mx-2 border-b hover:border-b-blue-600" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/6.png" class=" hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_5 mt-4">
+                                        <span class="pottery2_6 text-left">Mint Pottery</span>
+                                    </a>
+                                    <span class="pottery2_7 text-left font-bold">$ 65.00 USD</span>
+                                </div>
+                                <!-- 2 -->
+                                <div class="pottery2_8 flex flex-col justify-center items-center mx-2 border-b hover:border-b-blue-600" data-aos="fade-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="1500">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/8.png" class="hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_10 mt-4">
+                                        <span class="pottery2_11 text-left">Set Of Potterys</span>
+                                    </a>
+                                    <span class="pottery2_12 text-left font-bold">$ 75.00 USD</span>
+                                </div>
+                                <!-- 3 -->
+                                <div class="pottery2_13 flex flex-col justify-center items-center mx-2 border-b hover:border-b-blue-600" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/5.png" class=" hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_15 mt-4">
+                                        <span class="pottery2_16 text-left">Decor Plate</span>
+                                    </a>
+                                    <span class="pottery2_17 text-left font-bold">$ 125.00 USD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- # 3 # -->
+                        <div class="pottery2_1 w-full flex items-center">
+                            <div class="pottery2_2 flex flex-row items-center my-4">
+                                <!-- 1 -->
+                                <div class="pottery2_3 flex flex-col items-center mx-2 border-b hover:border-b-blue-600" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/7.png" class=" hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_5 mt-4">
+                                        <span class="pottery2_6 text-left">Dark Bowl</span>
+                                    </a>
+                                    <span class="pottery2_7 text-left font-bold">$ 115.00 USD</span>
+                                </div>
+                                <!-- 2 -->
+                                <div class="pottery2_8 flex flex-col justify-center items-center mx-2 border-b hover:border-b-blue-600" data-aos="fade-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="1500">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/12.png" class=" hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_10 mt-4">
+                                        <span class="pottery2_11 text-left">Orange Ceramic</span>
+                                    </a>
+                                    <span class="pottery2_12 text-left font-bold">$ 55.00 USD</span>
+                                </div>
+                                <!-- 3 -->
+                                <div class="pottery2_13 flex flex-col justify-center items-center mx-2 border-b hover:border-b-blue-600" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img src="./images/9.png" class=" hover:scale-110 transition duration-300 ease-in-out" alt="Louvre" />
+                                    </div>
+                                    <a href="" class="pottery2_15 mt-4">
+                                        <span class="pottery2_16 text-left">Square Pottery</span>
+                                    </a>
+                                    <span class="pottery2_17 text-left font-bold">$ 75.00 USD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- view all products -->
+        <div class="product" data-aos="flip-up">
+            <div class="product flex justify-center items-center my-8">
+                <span class=" text-sm text-white px-10 py-5 bg-red-700">VIEW ALL PRODUCTS</span>
+            </div>
+        </div>
+
+        <!-- background cover2 -->
+        <div class="cover2" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+            <div class="cover-image flex bg-center bg-cover" style="background-image: url(./images/2.jpeg)">
+                <div class="flex flex-row">
+                    <div class="cover2-item flex flex-col justify-center mt-12 p-8 w-4/6">
+                        <span class="my-4 text-gray-500">POMPEO POTTERY</span>
+                        <div class="">
+                            <h2 class="cover2-text text-4xl text-blue-800 font-bold" data-aos="fade-down">Ready to start shopping?</h2>
+                        </div>
+                        <div class="mt-8">
+                            <span class="cover2-text1 text-md text-blue-800 text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum.
+                            </span>
+                        </div>
+                        <div class="my-12">
+                            <span class="cover2-text2 text-sm text-white border px-8 py-6 rounded bg-red-700">
+                                NEW COLLECTION
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest new -->
+        <div class="latest-content my-20" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
+            <div class="latest-items flex flex-col justify-center items-center">
+                <div class="telegram w-20 my-4 m-auto" data-aos="zoom-out-left">
+                    <img src="./images/telegram.png">
+                </div>
+                <span class="latest-items2 my-4 text-orange-700">LATEST NEW</span>
+                <span class="latest-items2-1 text-5xl font-bold my-4 text-center">Latest news & New updates</span>
+               
+                <div class="latest-items3 relative w-2/5 my-8 flex flex-row justify-center">
+                    <div class="latest-items3-1 flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    </div> 
+                    <input type="text" id="email-address-icon" class="bg-gray-50 border border-blue-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email">
+
+                    <button class="latest-items3-2 btn inline-block w-2/6 border border-blue-600 text-white font-medium text-xs leading-tight uppercase rounded bg-gray-800 hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out rounded-lg mx-2" type="button" id="button-addon3">Search</button>
+                </div>
+        
+                <div class="flex items-center my-4">
+                    <input id="checkbox-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-2" class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-300">Sign up for our newsletter</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head logo -->
+        <div class="head2 flex flex-col justify-center items-center bg-gray-100 py-12" data-aos="fade-up"
+        data-aos-duration="3000">
+            <div class="head2-1 flex flex-col justify-center items-center">
+                <span class="header2-text text-3xl text-purple-800 font-bold mx-4">
+                    Porcelain
+                </span>
+            </div>
+            <div class="head2-3 my-12 w-1/3 text-center text-justify">
+                <span>I have always striven to fix beauty in wood, stone,
+                    glass or pottery, that has been my creed.
+                </span>
+            </div>
+            <div class="head2-4 flex flex-row justify-around w-5/6">
+                <div class="flex flex-col">
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="text-5xl">
+                            <ion-icon name="mail-unread-outline"></ion-icon>
+                        </div>
+                        <span class="font-bold">Email</span>
+                    </div>
+                    <span class="my-4 text-gray-500">porcelain@gmail.com</span>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="text-5xl">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <span class="font-bold">Find</span>
+                    </div>
+                    <span class="my-4 text-gray-500">Central Park, Manhattan
+                        New York, 1101</span>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="text-5xl">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+                        <span class="font-bold">Call</span>
+                    </div>
+                    <span class="my-4 text-gray-500">+128 86 345 678</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer bg-gray-800 py-10 text-center">
+            <div class="footer-content text-gray-500 text-sm">
+                <span>Template design by porcelain - Image License InfoPowered by porcelain</span>
+            </div>
+        </div>
+
+    </section>
+    <!-- data aos script -->
+    <script>
+        AOS.init();
+    </script>
+    <!-- flowbite script -->
+    <script src="../path/to/flowbite/dist/flowbite.js "></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js "></script>
+</body>
+
+</html>
